@@ -1,4 +1,12 @@
+.card {
+  max-width: 24rem;
+  border: 0.5px solid #B7C1C1;
+  padding: 15px;
+  border-radius: 5px;
+
+}
+
 .card-img-top {
   max-height: 180px;
-  max-width: 286px;
+  width: 100%;
 }
