@@ -1,12 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .card {
   max-width: 24rem;
   border: 0.5px solid #B7C1C1;
   padding: 15px;
   border-radius: 5px;
-
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card-img-top {
   max-height: 180px;
   width: 100%;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 21px;
+}
+
+.btn {
+  margin-top: 10px;
 }

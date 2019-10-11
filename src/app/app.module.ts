@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
+import { BasketService } from './core/services/basket.service';
+import { LocalStorageService } from './core/services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     SharedModule
   ],
-  providers: [],
+  providers: [BasketService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

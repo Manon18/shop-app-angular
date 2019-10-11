@@ -1,11 +1,11 @@
 <div class="container">
-  <div *ngFor="let product of productDetails" class="card">
-    <img class="card-img-top" alt="Card image"> {{ product.picture }}
+  <div *ngFor="let product of productDetails; let i = index" class="card">
+    <img class="card-img-top" src="{{ product.picture }}"alt="Card image">
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
       <p class="card-text">{{ product.label }}</p>
       <div>{{ product.price }} UAH</div>
-      <a href="#" class="btn btn-primary">Add to basket</a>
+      <a class="btn btn-primary" (click)="getElement(product)" id="button">Add to basket</a>
     </div>
   </div>
 </div>

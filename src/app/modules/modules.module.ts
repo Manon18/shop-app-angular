@@ -5,19 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from '../app-routing.module';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
-  declarations: [ProductsListComponent, BasketComponent],
+  declarations: [],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
     AppRoutingModule
   ],
-  exports: [ ProductsListComponent, BasketComponent ],
+  exports: [],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
 export class ModulesModule { }
