@@ -3,6 +3,12 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 90%;
+    margin-top: 45px;
+}
+
+.remove-icon {
+    width: 25px;
+    height: 25px;
 }
 
 .card-img {
@@ -13,7 +19,7 @@
 .row {
     display: flex;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 7px;
 }
 
 .card-title {
@@ -27,4 +33,14 @@
 
 .card-price {
     font-size: 20px;
+}
+
+.total-price {
+    margin-top: 35px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #00ace6;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

@@ -1,6 +1,7 @@
 <div class="container">
   <div *ngFor="let product of products">
     <div class="card mb-3">
+      <img class="remove-icon" src="../../../assets/pictures/remove-icon.svg" (click)="deleteProductById(product.id)">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="{{ product.picture }}" class="card-img" alt="Product img">
@@ -15,4 +16,5 @@
       </div>
     </div>
   </div>
+  <div class="total-price">Your total: {{ totalAmount() }} UAH</div>
 </div>

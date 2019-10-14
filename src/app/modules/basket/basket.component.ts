@@ -18,8 +18,25 @@ export class BasketComponent implements OnInit {
     this.products = this.basketService.getProductsFromLocalStorage();
   }
 
-  //public getDataFromStogare(): any {
+  public deleteProductById(id: number) {
+
+    this.products.forEach((value, index) => {
+      if (value.id === id) {
+        this.products.splice(index, 1);
+      }
+    })
+
+    this.localStorageService.save('product7', this.products);
+  }
+  
+  public totalAmount(): number {
+    let total: number = 0;
+
+    this.products.forEach((el) => {
+      total += el.price;
+    })
     
-  //}
+    return total;
+  }
 
 }
