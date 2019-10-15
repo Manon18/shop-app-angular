@@ -6,8 +6,6 @@
 
 .card {
   max-width: 24rem;
-  border: 0.5px solid #B7C1C1;
-  padding: 15px;
   border-radius: 5px;
   text-align: center;
   margin-left: 10px;
@@ -26,4 +24,5 @@
 
 .btn {
   margin-top: 10px;
+  color: #fff !important;
 }

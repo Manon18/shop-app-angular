@@ -1,0 +1,23 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60% !important;
+    height: 60%;
+}
+
+.h3-responsive {
+    font-size: 40px;
+    color: #0d0d0d;
+    margin-bottom: 22%;
+    text-shadow: 4px 4px 5px #595959;
+}
+
+.quote {
+    font-size: 29px;
+    color: #0d0d0d;
+    margin-bottom: 5%;
+    text-shadow: 2px 2px 3px #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+}
