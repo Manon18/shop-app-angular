@@ -10,11 +10,16 @@
           <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text text">{{ product.label }}</p>
-            <p class="card-text card-price">{{ product.price }} UAH</p>
+            <div class="quantity-container">
+              <div class="subtract-quantity" (click)="subtractProduct(product.quantity)">-</div>
+              <input type="number" id="productsQuantity" name="productsQuantity" class="products-quantity" min="1" value="{{ product.quantity}}">
+              <div class="add-quantity" (click)="addProduct(product.id)">+</div>
+            </div>
+            <p class="card-text card-price">{{ getOneProductPrice(product.id) }} UAH</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="total-price">Your total: {{ totalAmount() }} UAH</div>
+  <div class="total-price">Your total: {{ totalAmountOfProducts() }} UAH</div>
 </div>

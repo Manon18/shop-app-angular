@@ -4,4 +4,5 @@ export interface productDetails {
   name: string;
   label: string;
   price: number;
+  quantity: number;
 }

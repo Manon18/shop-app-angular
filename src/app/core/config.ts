@@ -6,20 +6,23 @@ export const PRODUCTS: productDetails[] = [
     picture: '../assets/pictures/tarragon-pesto.jpg',
     name: 'Article 1',
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    price: 25
+    price: 25,
+    quantity: 1
   },
   {
     id: 2,
     picture: '../assets/pictures/hellofresh.jpg',
     name: 'Article 2',
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    price: 35
+    price: 35,
+    quantity: 1
   },
   {
     id: 3,
     picture: '../assets/pictures/flatbread-salad.jpg',
     name: 'Article 3',
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    price: 45
+    price: 45,
+    quantity: 1
   }
 ];

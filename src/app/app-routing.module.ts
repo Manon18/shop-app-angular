@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './modules/home/home.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
     ProductsListComponent, 
     BasketComponent
   ],
-  imports: [BrowserModule, MDBBootstrapModule.forRoot(), RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, MDBBootstrapModule.forRoot(), RouterModule.forRoot(routes)],
   exports: [
     RouterModule, 
     HomeComponent, 
