@@ -11,7 +11,7 @@
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text text">{{ product.label }}</p>
             <div class="quantity-container">
-              <div class="subtract-quantity" (click)="subtractProduct(product.quantity)">-</div>
+              <div class="subtract-quantity" (click)="subtractProduct(product.id)">-</div>
               <input type="number" id="productsQuantity" name="productsQuantity" class="products-quantity" min="1" value="{{ product.quantity}}">
               <div class="add-quantity" (click)="addProduct(product.id)">+</div>
             </div>

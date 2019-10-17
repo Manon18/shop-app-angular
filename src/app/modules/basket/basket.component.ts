@@ -37,8 +37,6 @@ export class BasketComponent implements OnInit {
       total = el.price * el.quantity;
       sumOfTotal += total;
     })
-
-    console.log(sumOfTotal);
     
     return sumOfTotal;
   }
@@ -46,7 +44,7 @@ export class BasketComponent implements OnInit {
   public subtractProduct(productId: number): void {
 
     this.products.forEach((product) => {
-      if ((product.id === product.id) && product.quantity > 1) {
+      if ((product.id === productId) && product.quantity > 1) {
         product.quantity -= 1;
       }
     })
