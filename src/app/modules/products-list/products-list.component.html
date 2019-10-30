@@ -5,7 +5,12 @@
       <h5 class="card-title">{{ product.name }}</h5>
       <p class="card-text">{{ product.label }}</p>
       <div>{{ product.price }} UAH</div>
-      <a class="btn btn-primary" (click)="getElement(product)" id="button">Add to basket</a>
+      <div *ngFor="let item of getAddedProductsFromStogare()">
+        <a class="btn btn-primary" (click)="addProductToBasket(product)" *ngIf="product.id === item.id" id="button">Add to basket</a>
+      </div>
+      <div *ngFor="let addedItem of itemsFromStorage">
+        <div class="added-product" *ngIf="(product.id === addedItem.id) && (addedItem.isAddedToBasket === true)">Product has already added to basket</div>
+      </div>
     </div>
   </div>
 </div>

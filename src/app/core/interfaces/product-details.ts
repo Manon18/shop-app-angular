@@ -5,4 +5,5 @@ export interface productDetails {
   label: string;
   price: number;
   quantity: number;
+  isAddedToBasket: boolean;
 }
