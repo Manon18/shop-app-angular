@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="empty-basket" *ngIf="products.length === 0">
+    <img src="../../../assets/pictures/basket-empty.jpg">
+  </div>
   <div *ngFor="let product of products">
     <div class="card mb-3">
       <img class="remove-icon" src="../../../assets/pictures/remove-icon.svg" (click)="deleteProductById(product.id)">
@@ -21,5 +24,5 @@
       </div>
     </div>
   </div>
-  <div class="total-price">Your total: {{ totalAmountOfProducts() }} UAH</div>
+  <div class="total-price" *ngIf="products.length !== 0">Your total: {{ totalAmountOfProducts() }} UAH</div>
 </div>

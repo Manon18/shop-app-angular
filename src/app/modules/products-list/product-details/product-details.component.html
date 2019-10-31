@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="card">
+    <div *ngFor="let product of getOneProduct()">
+      <img src="{{ product.picture }}" class="product-details-img">
+      <div class="card-body">
+        <div class="product-details-title">{{ product.name }}</div>
+        <div>{{ product.label }}</div>
+        <div class="product-details-price">{{ product.price }} UAH</div>
+      </div>
+    </div>
+  </div>
+</div>

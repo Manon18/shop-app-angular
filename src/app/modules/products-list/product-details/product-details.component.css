@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-details-img {
+    max-height: 100%;
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
+}
+
+.product-details-title {
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+.product-details-price {
+    font-size: 18px;
+}
