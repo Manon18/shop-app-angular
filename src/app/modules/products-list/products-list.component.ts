@@ -16,6 +16,7 @@ export class ProductsListComponent implements OnInit {
   public itemsFromStorage: any[];
   public filteredDataFromStorage: any;
   public data: any;
+  public allProductsList: productDetails[] = [];
 
   constructor(private basketService: BasketService,
     public localStorageService: LocalStorageService) {
@@ -24,6 +25,17 @@ export class ProductsListComponent implements OnInit {
 
   ngOnInit() {
     this.getAddedProductsFromStogare();
+
+    this.productDetails.forEach((el) => this.itemsFromStorage.forEach((val) => {
+      if (el.id === val.id) {
+        el.isAddedToBasket = true;
+      }
+    }))
+
+    this.allProductsList = this.productDetails;
+
+    return this.allProductsList;
+
   }
 
   public addProductToBasket(data: any) {
@@ -37,7 +49,7 @@ export class ProductsListComponent implements OnInit {
 
       if (!this.mapArr.includes(data.id)) {
         data.isAddedToBasket = true;
-        
+
         this.dataArr.push(data);
       }
 

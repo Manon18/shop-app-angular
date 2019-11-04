@@ -23,6 +23,14 @@
   font-size: 21px;
 }
 
+.added-to-basket-btn {
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+  margin-left: 3px;
+}
+
 .btn {
   margin-top: 10px;
   color: #fff !important;

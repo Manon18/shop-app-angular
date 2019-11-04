@@ -1,15 +1,15 @@
 <div class="container">
-  <div *ngFor="let product of productDetails; let i = index" class="card" routerLink = "/product-details/{{product.id}}">
-    <img class="card-img-top" src="{{ product.picture }}"alt="Card image">
+  <div *ngFor="let product of allProductsList; let i = index" class="card">
+    <img class="card-img-top" src="{{ product.picture }}"alt="Card image" routerLink = "/product-details/{{product.id}}">
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
       <p class="card-text">{{ product.label }}</p>
       <div>{{ product.price }} UAH</div>
-      <div *ngFor="let item of getAddedProductsFromStogare()">
-        <a class="btn btn-primary" (click)="addProductToBasket(product)" *ngIf="product.id === item.id" id="button">Add to basket</a>
-      </div>
-      <div *ngFor="let addedItem of itemsFromStorage">
-        <div class="added-product" *ngIf="(product.id === addedItem.id) && (addedItem.isAddedToBasket === true)">Product has already added to basket</div>
+      <div>
+        <a class="btn btn-primary" (click)="addProductToBasket(product)" *ngIf="product.isAddedToBasket === false" id="button">Add to basket</a>
+        <div class="added-product" *ngIf="product.isAddedToBasket === true">Product has already added to basket
+          <img src="../../../assets/pictures/check-mark.svg" class="added-to-basket-btn">
+        </div>
       </div>
     </div>
   </div>
