@@ -25,7 +25,7 @@ export class ProductsListComponent implements OnInit {
     this.allProductsList = this.productService.getAllProductsList();
   }
 
-  public addProductToDesireList(product: any) {
+  public addProductToDesireList(product: any): void {
     this.desiresFromStorage = this.localStorageService.get('desires') || [];
 
     this.getIdsOfUserDesires = this.desiresFromStorage.map((desire) => desire.id);

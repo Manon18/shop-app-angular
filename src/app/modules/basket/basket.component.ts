@@ -18,7 +18,7 @@ export class BasketComponent implements OnInit {
     this.products = this.basketService.getProductsFromLocalStorage();
   }
 
-  public deleteProductById(id: number) {
+  public deleteProductById(id: number): void {
 
     this.products.forEach((value, index) => {
       if (value.id === id) {

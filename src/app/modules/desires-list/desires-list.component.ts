@@ -21,26 +21,16 @@ export class DesiresListComponent implements OnInit {
 
     this.desiresFromStorage = this.localStorageService.get('desires') || [];
 
-    let getIdAndIsAddToBasket = {
-      isAddToBasket: Boolean,
-      id: Number
-    }
-
-    let getIsAddToBasket = this.allProductsList.map((val) => getIsAddToBasket = { 
-      isAddToBasket: val.isAddedToBasket, 
-      id: val.id
-    });
-
     this.desiresFromStorage.forEach((el) => {
-      getIsAddToBasket.forEach((val) => {
+      this.allProductsList.forEach((val) => {
         if (el.id === val.id) {
-          el.isAddedToBasket = val.isAddToBasket;
+          el.isAddedToBasket = val.isAddedToBasket;
         }
       })
     })
   }
 
-  public removeDesire(desireId: number) {
+  public removeDesire(desireId: number): void {
     console.log(this.desiresFromStorage);
 
     this.getIdOfUserDesire = this.desiresFromStorage.map((val) => val.id);
