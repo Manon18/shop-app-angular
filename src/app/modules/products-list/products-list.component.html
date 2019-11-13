@@ -1,13 +1,15 @@
 <div class="container">
   <div *ngFor="let product of allProductsList; let i = index" class="card">
-    <img class="card-img-top" src="{{ product.picture }}"alt="Card image" routerLink = "/product-details/{{product.id}}">
+    <img class="card-img-top" src="{{ product.picture }}" alt="Card image" routerLink = "/product-details/{{product.id}}">
     <div class="card-body">
+      <img src="../../../assets/pictures/dislike.svg" class="dislike" (click)="addProductToDesireList(product)" *ngIf="product.like === false">
+      <img src="../../../assets/pictures/like.svg" class="like" *ngIf="product.like === true">
       <h5 class="card-title">{{ product.name }}</h5>
       <p class="card-text">{{ product.label }}</p>
       <div>{{ product.price }} UAH</div>
       <div>
-        <a class="btn btn-primary" (click)="addProductToBasket(product)" *ngIf="product.isAddedToBasket === false" id="button">Add to basket</a>
-        <div class="added-product" *ngIf="product.isAddedToBasket === true">Product has already added to basket
+        <a class="btn btn-primary" (click)="productService.addProductToBasket(product)" *ngIf="product.isAddedToBasket === false" id="button">Add to basket</a>
+        <div class="added-product" *ngIf="product.isAddedToBasket === true">Product has added to basket
           <img src="../../../assets/pictures/check-mark.svg" class="added-to-basket-btn">
         </div>
       </div>

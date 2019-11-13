@@ -8,12 +8,14 @@ import { HomeComponent } from './modules/home/home.component';
 import { ProductsListComponent } from './modules/products-list/products-list.component';
 import { ProductDetailsComponent } from './modules/products-list/product-details/product-details.component';
 import { BasketComponent } from './modules/basket/basket.component';
+import { DesiresListComponent } from './modules/desires-list/desires-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'products', component: ProductsListComponent},
   { path: 'product-details/:id', component: ProductDetailsComponent},
-  { path: 'basket', component: BasketComponent }
+  { path: 'basket', component: BasketComponent },
+  { path: 'desires-list', component: DesiresListComponent }
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const routes: Routes = [
     HomeComponent, 
     ProductsListComponent,
     ProductDetailsComponent,
-    BasketComponent
+    BasketComponent,
+    DesiresListComponent
   ],
   imports: [BrowserModule, FormsModule, MDBBootstrapModule.forRoot(), RouterModule.forRoot(routes)],
   exports: [
@@ -29,8 +32,9 @@ const routes: Routes = [
     HomeComponent, 
     ProductsListComponent,
     ProductDetailsComponent,
-    BasketComponent
+    BasketComponent,
+    DesiresListComponent
   ],
-  entryComponents: [HomeComponent, ProductsListComponent, ProductDetailsComponent, BasketComponent]
+  entryComponents: [HomeComponent, ProductsListComponent, ProductDetailsComponent, BasketComponent, DesiresListComponent]
 })
 export class AppRoutingModule { }

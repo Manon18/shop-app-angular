@@ -10,11 +10,14 @@
     margin-left: auto;
     max-width: 90%;
     margin-top: 45px;
+    box-shadow: 0 7px 40px 0 #5D6D7E;
+    border: none;
 }
 
 .remove-icon {
-    width: 25px !important;
-    height: 25px !important;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
 .card-img {

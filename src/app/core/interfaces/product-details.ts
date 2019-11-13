@@ -6,4 +6,5 @@ export interface productDetails {
   price: number;
   quantity: number;
   isAddedToBasket: boolean;
+  like: boolean;
 }

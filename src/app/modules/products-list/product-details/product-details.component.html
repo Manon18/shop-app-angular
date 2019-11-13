@@ -6,6 +6,12 @@
         <div class="product-details-title">{{ product.name }}</div>
         <div>{{ product.label }}</div>
         <div class="product-details-price">{{ product.price }} UAH</div>
+        <div>
+          <a class="btn btn-primary product-details-add" (click)="productService.addProductToBasket(product)" *ngIf="product.isAddedToBasket === false" >Add to basket</a>
+          <div class="added-product" *ngIf="product.isAddedToBasket === true">Product has added to basket
+            <img src="../../../assets/pictures/check-mark.svg" class="added-to-basket-btn">
+          </div>
+        </div>
       </div>
     </div>
   </div>

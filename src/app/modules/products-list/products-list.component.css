@@ -10,12 +10,20 @@
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
-  cursor: pointer;
+  box-shadow: 0 7px 40px 0 #5D6D7E;
+  border: none;
 }
 
 .card-img-top {
   max-height: 180px;
   width: 100%;
+  cursor: pointer;
+}
+
+.dislike, .like {
+  height: 25px !important;
+  width: 25px !important;
+  cursor: pointer;
 }
 
 .card-title {
@@ -38,4 +46,8 @@
 
 .added-product {
   color: #337ab7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
 }

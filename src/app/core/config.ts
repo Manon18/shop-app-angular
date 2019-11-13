@@ -8,7 +8,8 @@ export const PRODUCTS: productDetails[] = [
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 25,
     quantity: 1,
-    isAddedToBasket: false
+    isAddedToBasket: false,
+    like: false
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ export const PRODUCTS: productDetails[] = [
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 35,
     quantity: 1,
-    isAddedToBasket: false
+    isAddedToBasket: false,
+    like: false
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const PRODUCTS: productDetails[] = [
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     price: 45,
     quantity: 1,
-    isAddedToBasket: false
+    isAddedToBasket: false,
+    like: false
   }
 ];

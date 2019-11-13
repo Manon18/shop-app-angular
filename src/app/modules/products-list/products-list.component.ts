@@ -3,6 +3,7 @@ import { PRODUCTS } from '../../core/config';
 import { productDetails } from '../../core/interfaces/product-details';
 import { BasketService } from 'src/app/core/services/basket.service';
 import { LocalStorageService } from 'src/app/core/services/local-storage.service';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-products-list',
@@ -11,52 +12,40 @@ import { LocalStorageService } from 'src/app/core/services/local-storage.service
 })
 export class ProductsListComponent implements OnInit {
   public productDetails: productDetails[] = PRODUCTS;
-  public mapArr: any[] = [];
-  public dataArr: any[] = [];
+  public getIdsOfUserDesires: any[] = [];
+  public desiresFromStorage: productDetails[] = [];
   public itemsFromStorage: any[];
+  public desires: any;
   public filteredDataFromStorage: any;
-  public data: any;
   public allProductsList: productDetails[] = [];
 
   constructor(private basketService: BasketService,
-    public localStorageService: LocalStorageService) {
+    public localStorageService: LocalStorageService,
+    public productService: ProductService) {
       this.itemsFromStorage = JSON.parse(window.localStorage.getItem('product7')) || [];
     }
 
   ngOnInit() {
     this.getAddedProductsFromStogare();
-
-    this.productDetails.forEach((el) => this.itemsFromStorage.forEach((val) => {
-      if (el.id === val.id) {
-        el.isAddedToBasket = true;
-      }
-    }))
-
-    this.allProductsList = this.productDetails;
-
-    return this.allProductsList;
-
+    this.allProductsList = this.productService.getAllProductsList();
   }
 
-  public addProductToBasket(data: any) {
+  public addProductToDesireList(product: any) {
+    this.desires = window.localStorage.getItem('desires') || [];
 
-    this.data = window.localStorage.getItem('product7') || [];
-
-    if (this.data) {
-      this.dataArr = JSON.parse(this.data);
-
-      this.mapArr = this.dataArr.map((el) => el.id);
-
-      if (!this.mapArr.includes(data.id)) {
-        data.isAddedToBasket = true;
-
-        this.dataArr.push(data);
-      }
-
-      this.localStorageService.save('product7', this.dataArr);
-
+    if (this.desires) {
+      this.desiresFromStorage = JSON.parse(this.desires);
     }
 
+    this.getIdsOfUserDesires = this.desiresFromStorage.map((desire) => desire.id);
+
+    if (!this.getIdsOfUserDesires.includes(product.id)) {
+      product.like = true;
+
+      this.desiresFromStorage.push(product);
+    }
+
+    this.localStorageService.save('desires', this.desiresFromStorage);
   }
 
   public getAddedProductsFromStogare(): any[] {

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card-wrapper">
+    <div *ngFor="let desire of desiresFromStorage" class="card col-sm-5">
+        <img src="{{ desire.picture }}" alt="User desire" class="user-desire-img">
+        <img src="../../../assets/pictures/cancel-desire.svg" alt="Cancel desire" class="cancel-desire-img" (click)="removeDesire(desire.id)">
+        <div class="card-body">
+          <h4 class="card-title">{{ desire.name }}</h4>
+          <p class="card-text">{{ desire.label }}</p>
+          <div>{{ desire.price }} UAH</div>
+          <div class="add-to-basket-container">
+            <a class="btn btn-primary add-to-basket-btn" (click)="productService.addProductToBasket(desire)" *ngIf="desire.isAddedToBasket === false">Add to basket</a>
+            <div class="added-desire" *ngIf="desire.isAddedToBasket === true">Product has added to basket
+              <img src="../../../assets/pictures/check-mark.svg" class="added-to-basket-done">
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

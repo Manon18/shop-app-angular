@@ -1,3 +1,18 @@
 header {
   font-size: 21px;
 }
+
+#desires-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desires-list-img {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.desires-list-text {
+  font-size: 11px;
+}

@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+.card {
+    box-shadow: 0 7px 40px 0 #5D6D7E;
+    border: none;
+}
+
 .product-details-img {
     max-height: 100%;
     width: 100%;
@@ -24,4 +29,22 @@
 
 .product-details-price {
     font-size: 18px;
+}
+
+.product-details-add {
+    margin-top: 7px;
+    color: #fff !important;
+}
+
+.added-product {
+    color: #337ab7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.added-to-basket-btn {
+    width: 30px;
+    height: 30px;
 }

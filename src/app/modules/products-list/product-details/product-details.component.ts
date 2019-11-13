@@ -16,8 +16,9 @@ export class ProductDetailsComponent implements OnInit {
   public product: any;
   public id: number;
   public prodDetailsObject: any;
+  public allProductsList: productDetails[] = [];
 
-  constructor(public LocalStorageService: LocalStorageService,
+  constructor(public localStorageService: LocalStorageService,
     private productService: ProductService,
     private route: ActivatedRoute) { }
 
@@ -35,6 +36,9 @@ export class ProductDetailsComponent implements OnInit {
         }
       );
 
+      console.log(this.product);
+
     return this.product;
   }
+
 }

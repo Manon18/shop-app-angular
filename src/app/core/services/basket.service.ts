@@ -13,6 +13,6 @@ export class BasketService {
     constructor(private localStorageService: LocalStorageService) {}
 
     public getProductsFromLocalStorage(): productDetails[] {
-        return this.localStorageService.get('product7');
+        return this.localStorageService.get('product7') || [];
     }
 }
