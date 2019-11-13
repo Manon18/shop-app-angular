@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { LocalStorageService } from './local-storage.service';
-import { productDetails } from '../../core/interfaces/product-details';
-import { PRODUCTS } from '../../core/config';
+import { LocalStorageService } from 'src/app/core/services/local-storage.service';
+import { productDetails } from 'src/app/core/interfaces/product-details';
+import { PRODUCTS } from 'src/app/core/config';
 
 @Injectable({ 
     providedIn: 'root' 

@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
-import { LocalStorageService } from './local-storage.service';
-import { productDetails } from '../../core/interfaces/product-details';
-import { PRODUCTS } from '../../core/config';
+import { LocalStorageService } from 'src/app/core/services/local-storage.service';
+import { productDetails } from 'src/app/core/interfaces/product-details';
+import { PRODUCTS } from 'src/app/core/config';
 
 @Injectable({ 
     providedIn: 'root' 
@@ -10,7 +10,7 @@ import { PRODUCTS } from '../../core/config';
 export class ProductService implements OnInit {
     public productDetails: productDetails[] = PRODUCTS;
     public allProductsList: productDetails[] = [];
-    public itemsFromStorage: any[];
+    public itemsFromStorage: productDetails[] = []
     public desiresFromStorage: productDetails[] = [];
     public oneProductFromProductsList: any[] = [];
     public existedProducts: productDetails[] = [];
@@ -26,7 +26,9 @@ export class ProductService implements OnInit {
     }
 
     public getProduct(id: number) {
-        return this.oneProductFromProductsList = this.getAllProductsList().filter((product) => product.id === id);
+        this.oneProductFromProductsList = this.getAllProductsList().filter((product) => product.id === id);
+
+        return this.oneProductFromProductsList;
     }
 
     public addProductToBasket(data: any) {

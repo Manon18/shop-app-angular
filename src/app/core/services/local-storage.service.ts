@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { productDetails } from 'src/app/core/interfaces/product-details';
 
 @Injectable({ 
     providedIn: 'root' 
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 export class LocalStorageService {
 
-    save(key: string, product: any) {
+    save(key: string, product: productDetails[]) {
         window.localStorage.setItem(key, JSON.stringify(product));
     }
 

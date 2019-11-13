@@ -13,9 +13,8 @@ import { ProductService } from 'src/app/core/services/product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   public productDetails: productDetails[] = PRODUCTS;
-  public product: any;
+  public product: productDetails[];
   public id: number;
-  public prodDetailsObject: any;
   public allProductsList: productDetails[] = [];
 
   constructor(public localStorageService: LocalStorageService,
@@ -26,7 +25,7 @@ export class ProductDetailsComponent implements OnInit {
     this.getOneProduct();
   }
 
-  public getOneProduct(): any {
+  public getOneProduct(): productDetails[] {
 
     this.route.params
       .subscribe(
