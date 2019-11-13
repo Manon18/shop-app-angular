@@ -31,11 +31,8 @@ export class DesiresListComponent implements OnInit {
   }
 
   public removeDesire(desireId: number): void {
-    console.log(this.desiresFromStorage);
 
     this.getIdOfUserDesire = this.desiresFromStorage.map((val) => val.id);
-
-    console.log(this.getIdOfUserDesire);
 
     this.getIdOfUserDesire.forEach((id, index) => {
       if (desireId === id) {
