@@ -22,7 +22,7 @@ export class ProductsListComponent implements OnInit {
   constructor(private basketService: BasketService,
     public localStorageService: LocalStorageService,
     public productService: ProductService) {
-      this.itemsFromStorage = JSON.parse(window.localStorage.getItem('product7')) || [];
+      this.itemsFromStorage = this.localStorageService.get('product7') || [];
     }
 
   ngOnInit() {
@@ -31,11 +31,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   public addProductToDesireList(product: any) {
-    this.desires = window.localStorage.getItem('desires') || [];
-
-    if (this.desires) {
-      this.desiresFromStorage = JSON.parse(this.desires);
-    }
+    this.desiresFromStorage = this.localStorageService.get('desires') || [];
 
     this.getIdsOfUserDesires = this.desiresFromStorage.map((desire) => desire.id);
 

@@ -13,7 +13,6 @@ export class ProductService implements OnInit {
     public itemsFromStorage: any[];
     public desiresFromStorage: productDetails[] = [];
     public oneProductFromProductsList: any[] = [];
-    public data: any;
     public existedProducts: productDetails[] = [];
     public productsIds: number[] = [];
 
@@ -31,24 +30,18 @@ export class ProductService implements OnInit {
     }
 
     public addProductToBasket(data: any) {
+        this.existedProducts = this.localStorageService.get('product7') || [];
 
-        this.data = window.localStorage.getItem('product7') || [];
+        this.productsIds = this.existedProducts.map((el) => el.id);
+        
+        if (!this.productsIds.includes(data.id)) {
+            data.isAddedToBasket = true;
     
-        if (this.data) {
-            this.existedProducts = JSON.parse(this.data);
-        
-            this.productsIds = this.existedProducts.map((el) => el.id);
-        
-            if (!this.productsIds.includes(data.id)) {
-                data.isAddedToBasket = true;
-        
-                this.existedProducts.push(data);
-            }
-        
-            this.localStorageService.save('product7', this.existedProducts);
-        
+            this.existedProducts.push(data);
         }
     
+        this.localStorageService.save('product7', this.existedProducts);
+
     }
 
     public getAllProductsList(): productDetails[] {

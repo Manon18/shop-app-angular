@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { productDetails } from '../../core/interfaces/product-details';
 import { LocalStorageService } from 'src/app/core/services/local-storage.service';
-import { BasketService } from 'src/app/core/services/basket.service';
 import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
@@ -13,18 +12,14 @@ export class DesiresListComponent implements OnInit {
   public desiresFromStorage: productDetails[] = [];
   public getIdOfUserDesire: number[] = [];
   public allProductsList: productDetails[] = [];
-  public productsFromBasket: productDetails[] = [];
 
   constructor(public localStorageService: LocalStorageService,
-    public basketService: BasketService,
     public productService: ProductService ) { }
 
   ngOnInit() {
     this.allProductsList = this.productService.getAllProductsList();
 
     this.desiresFromStorage = this.localStorageService.get('desires') || [];
-
-    this.productsFromBasket = this.basketService.getProductsFromLocalStorage();
 
     let getIdAndIsAddToBasket = {
       isAddToBasket: Boolean,
