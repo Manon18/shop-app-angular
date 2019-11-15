@@ -9,6 +9,10 @@
   margin-bottom: 10px !important;
 }
 
+.nav-tabs {
+  border-bottom: 1px solid #fff;
+}
+
 .nav-link {
   color: #fff;
 }

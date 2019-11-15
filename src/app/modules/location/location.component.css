@@ -1,23 +1,64 @@
 .container {
     display:  flex;
     flex-direction: column !important;
+    background-color: #EEF2F7;
+    padding: 25px;
+    position: relative;
+    margin-top: 5%;
+}
+
+.container::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    left: 0;
+    top: -40px;
+    border-bottom: 40px solid #EEF2F7;
+    border-left: 910px solid transparent;
+    border-right: 230px solid transparent;
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    left: 0;
+    bottom: -40px;
+    border-top: 40px solid #EEF2F7;;
+    border-left: 230px solid transparent;
+    border-right: 910px solid transparent;
 }
 
 .contact-info {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 3%;
+    margin-top: 1%;
+    background-color: #fff;
 }
 
 .contact-info-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+#email-img {
+    margin-right: -18px;
 }
 
 .location-img {
     width: 40%;
     height: 40%;
+    margin-right: -10px;
+}
+
+.map-container {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #fff;
 }
 
 .map {
