@@ -9,13 +9,15 @@ import { ProductsListComponent } from './modules/products-list/products-list.com
 import { ProductDetailsComponent } from './modules/products-list/product-details/product-details.component';
 import { BasketComponent } from './modules/basket/basket.component';
 import { DesiresListComponent } from './modules/desires-list/desires-list.component';
+import { LocationComponent } from 'src/app/modules/location/location.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'products', component: ProductsListComponent},
   { path: 'product-details/:id', component: ProductDetailsComponent},
   { path: 'basket', component: BasketComponent },
-  { path: 'desires-list', component: DesiresListComponent }
+  { path: 'desires-list', component: DesiresListComponent },
+  { path: 'location', component: LocationComponent }
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const routes: Routes = [
     ProductsListComponent,
     ProductDetailsComponent,
     BasketComponent,
-    DesiresListComponent
+    DesiresListComponent,
+    LocationComponent
   ],
   imports: [BrowserModule, FormsModule, MDBBootstrapModule.forRoot(), RouterModule.forRoot(routes)],
   exports: [
@@ -33,8 +36,9 @@ const routes: Routes = [
     ProductsListComponent,
     ProductDetailsComponent,
     BasketComponent,
-    DesiresListComponent
+    DesiresListComponent,
+    LocationComponent
   ],
-  entryComponents: [HomeComponent, ProductsListComponent, ProductDetailsComponent, BasketComponent, DesiresListComponent]
+  entryComponents: [HomeComponent, ProductsListComponent, ProductDetailsComponent, BasketComponent, DesiresListComponent, LocationComponent]
 })
 export class AppRoutingModule { }
