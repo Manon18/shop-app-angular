@@ -30,5 +30,35 @@ export const PRODUCTS: productDetails[] = [
     quantity: 1,
     isAddedToBasket: false,
     like: false
+  },
+  {
+    id: 4,
+    picture: '../assets/pictures/salad3.jpg',
+    name: 'Article 4',
+    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    price: 55,
+    quantity: 1,
+    isAddedToBasket: false,
+    like: false
+  },
+  {
+    id: 5,
+    picture: '../assets/pictures/summer-bread-salad.jpg',
+    name: 'Article 5',
+    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    price: 65,
+    quantity: 1,
+    isAddedToBasket: false,
+    like: false
+  },
+  {
+    id: 6,
+    picture: '../assets/pictures/salad2.jpg',
+    name: 'Article 6',
+    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    price: 75,
+    quantity: 1,
+    isAddedToBasket: false,
+    like: false
   }
 ];

@@ -12,6 +12,8 @@
     margin-top: 45px;
     box-shadow: 0 7px 40px 0 #5D6D7E;
     border: none;
+    background-color: #5C7486;
+    color: #fff;
 }
 
 .remove-icon {
@@ -63,6 +65,10 @@
     font-size: 35px;
     margin-right: 10px;
     margin-bottom: 6px;
+}
+
+#products-quantity {
+    color: #000 !important;
 }
 
 .add-quantity {
