@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.triangle-top {
+    width: 0;
+    height: 0;
+    border-top: 100px solid #EEF2F7;
+    border-left: 932px solid transparent;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.facebook-btn,
+.google-btn {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(90deg, #00dd92 0%, #00ced1 100%) !important;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.login-icons {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.create-account {
+    margin-bottom: 45px;
+}
+
+.create-account-btn {
+    background-color: #0cabc7;
+    color: #fff;
+    box-shadow: 0 7px 40px 0 #0cabc7;
+    border-radius: 20px;
+    font-size: 21px;
+}
+
+
+.create-account-text {
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+.triangle-bottom {
+    width: 0;
+    height: 0;;
+    border-bottom: 100px solid #EEF2F7;
+    border-right: 932px solid transparent;
+}

@@ -39,3 +39,17 @@
 .desires-list-text {
   font-size: 11px;
 }
+
+#login {
+  border-bottom: none !important;
+}
+
+#login-page {
+  background-color: #0CABC7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#login-page:focus {
+  color: #fff !important;
+}
