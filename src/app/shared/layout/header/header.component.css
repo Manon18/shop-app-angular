@@ -44,7 +44,7 @@
   border-bottom: none !important;
 }
 
-#login-page {
+.login-page {
   background-color: #0CABC7;
   border-radius: 3px;
   cursor: pointer;

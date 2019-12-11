@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 import { ModulesModule } from '../modules/modules.module';
+import { AuthenticationService } from '../core/services/authentication.service';
+import { DynamiSocialLoginModule, AuthService, FacebookLoginProvider, GoogleLoginProvider, LoginProviderClassModel } from 'ng-dynami-social-login';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { LayoutComponent } from './layout/layout.component';
@@ -17,10 +19,11 @@ import { FooterComponent } from './layout/footer/footer.component';
     FormsModule,
     CommonModule,
     ModulesModule,
+    DynamiSocialLoginModule,
     AppRoutingModule
   ],
   exports: [ LayoutComponent ],
-  providers: [],
+  providers: [ AuthenticationService, AuthService ],
   bootstrap: []
 })
 export class SharedModule { }

@@ -2,7 +2,7 @@
   <div class="triangle-top"></div>
   <div class="triangle-bottom"></div>
   <div class="btn-container">
-    <a href="#" class="btn facebook-btn">
+    <a href="#" class="btn facebook-btn" (click)="_authenticationService.signInFacebook('facebook');" routerLink="/user/{{_authenticationService.getUserData().id}}">
       <img src="../../../assets/pictures/facebook-icon.svg" class="login-icons">
       <div>Login with facebook</div>
     </a>
