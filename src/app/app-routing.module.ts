@@ -14,6 +14,7 @@ import { LoginComponent } from 'src/app/modules/login/login.component';
 import { UserComponent } from 'src/app/modules/login/user/user.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'products', component: ProductsListComponent},
   { path: 'product-details/:id', component: ProductDetailsComponent},
@@ -47,6 +48,15 @@ const routes: Routes = [
     LoginComponent,
     UserComponent
   ],
-  entryComponents: [HomeComponent, ProductsListComponent, ProductDetailsComponent, BasketComponent, DesiresListComponent, LocationComponent, LoginComponent, UserComponent]
+  entryComponents: [
+    HomeComponent, 
+    ProductsListComponent, 
+    ProductDetailsComponent, 
+    BasketComponent, 
+    DesiresListComponent, 
+    LocationComponent, 
+    LoginComponent, 
+    UserComponent
+  ]
 })
 export class AppRoutingModule { }

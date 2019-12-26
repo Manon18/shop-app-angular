@@ -16,11 +16,16 @@ import { AuthenticationService } from './core/services/authentication.service';
 
 export function authServiceConfigs() {
   const facebook_oath_lient_id: string = '784456641977614';
+  const google_oath_client_id: string = 'client_ID...';
 
   let config = new AuthServiceConfig([
     {
       id: FacebookLoginProvider.PROVIDER_ID,
       provider: new FacebookLoginProvider(facebook_oath_lient_id)
+    },
+    {
+      id: GoogleLoginProvider.PROVIDER_ID,
+      provider: new GoogleLoginProvider(google_oath_client_id)
     }
   ]);
 

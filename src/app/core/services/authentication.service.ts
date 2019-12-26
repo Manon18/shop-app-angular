@@ -31,7 +31,7 @@ export class AuthenticationService {
     ngOnInit() {
     }
 
-    public signInFacebook(socialPlatform: string): Promise<any> {
+    public logIn(socialPlatform: string): Promise<any> {
         let socialPlatformProvider: any;
 
         if (socialPlatform === 'facebook') {
@@ -46,7 +46,7 @@ export class AuthenticationService {
 
         return this.socioAuthenticationServ.signIn(socialPlatformProvider)
             .then((res: SocialUserModel) => {
-                console.log(res.token);
+                console.log(res);
             })
             .catch((err) => {
                 console.log(err);
@@ -54,7 +54,7 @@ export class AuthenticationService {
 
     }
 
-    public signOutFacebook(): Promise<any> {
+    public logOut(): Promise<any> {
 
         return new Promise((resolve, reject) => {
             if (resolve) {
@@ -67,8 +67,6 @@ export class AuthenticationService {
         this.socioAuthenticationServ.authState.subscribe((user) => {
             this.userInfo = user;
         })
-    
-        console.log(typeof this.userInfo);
     
         return this.userInfo;
     }

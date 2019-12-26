@@ -2,11 +2,11 @@
   <div class="triangle-top"></div>
   <div class="triangle-bottom"></div>
   <div class="btn-container">
-    <a href="#" class="btn facebook-btn" (click)="_authenticationService.signInFacebook('facebook');" routerLink="/user/{{_authenticationService.getUserData().id}}">
+    <a href="#" class="btn facebook-btn" (click)="_authenticationService.logIn('facebook');" routerLink="/user/{{_authenticationService.getUserData().id}}">
       <img src="../../../assets/pictures/facebook-icon.svg" class="login-icons">
       <div>Login with facebook</div>
     </a>
-    <a href="#" class="btn google-btn">
+    <a href="#" class="btn google-btn"  (click)="_authenticationService.logIn('google');" routerLink="/user/{{_authenticationService.getUserData().id}}">
       <img src="../../../assets/pictures/google-icon.svg" class="login-icons">
       <div>Login with google</div>
     </a>
